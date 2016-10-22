@@ -1,0 +1,434 @@
+*{margin:0;padding:0;}
+$fontSize:64;
+@function px2Rem($px){
+  @return $px/$fontSize + rem;
+}
+a{
+  font-family: "Microsoft YaHei";
+  text-decoration: none;
+}
+
+%webpage{
+  width:100%;
+  height:100%;
+}
+html,body{
+  @extend %webpage;
+  font-family: "Microsoft YaHei";
+}
+.swiper-container{
+  @extend %webpage;
+  margin:0 auto;
+}
+.swiper-slide{
+  text-align: center;
+}
+%bgr{
+  background-position:50% 50%;
+  background-repeat:no-repeat;
+}
+@for $i from 1 to 11 {
+  .box-#{$i}{
+    @extend %bgr;
+    background-image: url("../images/big#{$i}.jpg");
+  }
+}
+.music-c{
+  background:url("../images/music.gif") no-repeat;
+  background-size:cover;
+  position: absolute;
+  right:5px;
+  top:5px;
+  z-index: 100;
+  display: block;
+  width:60px;
+  height:60px;
+}
+.music-p{
+  display: block;
+  width:px2Rem(60);
+  height:px2Rem(60);
+  background:url("../images/music.png") no-repeat;
+  -webkit-background-size:cover;
+  background-size:cover;
+  position: absolute;
+  right:px2Rem(30);
+  top:px2Rem(33);
+  z-index: 200;
+  animation: cir 1s linear infinite;
+}
+@keyframes cir {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform:rotate(360deg);
+  }
+}
+.hua{
+  display: block;
+  width:px2Rem(24);
+  height:px2Rem(18);
+ // background:url("../images/units-icons.png") no-repeat -119px -4px;
+  background:url("../images/arrow.png") no-repeat;
+  background-size:cover;
+  position: absolute;
+  right:px2Rem(10);
+  top:50%;
+  margin-top:px2Rem(-9);
+  animation:arrow 1s linear infinite;
+  z-index: 100;
+  //position: absolute;
+  //top: 50%;
+  //
+  transform: rotate(-90deg);
+}
+@keyframes arrow {
+  from{
+    right:px2Rem(10);
+    opacity:1;
+  }
+  to{
+    right:px2Rem(30);
+    opacity:0;
+  }
+}
+.box-1 .title{
+  font-size:px2Rem(64);
+  margin-top:px2Rem(38);
+  margin-bottom:px2Rem(90);
+  color:#2e2e2e;
+  font-family: "Microsoft YaHei";
+}
+.box-1 .desc{
+  text-align:center;
+  font-size:px2Rem(28);
+  color:#474747;
+  font-family: "Microsoft YaHei";
+}
+.box-1 .i1{
+  width:68%;
+  height:58%;
+  margin:20px auto 0;
+}
+.box-1 .i1 img{
+  @extend %webpage;
+}
+.box-1 .sh{
+  margin:px2Rem(65) auto 0;
+}
+.box-1 .sh a{
+  font-size:px2Rem(28);
+  color:#1b1b1a;
+}
+.box-2 .title{
+  font-size:px2Rem(48);
+  color:#141414;
+  margin:px2Rem(300) auto 0;
+  font-family: "Microsoft YaHei";
+}
+.box-2 .i2{
+  width:99%;
+  height:43%;
+  margin:0 auto;
+}
+.box-2 .i2 img{
+  width:100%;
+  height:100%;
+}
+.box-2 .desc{
+  font-size:px2Rem(28);
+  line-height:px2Rem(38);
+  color:#010101;
+  text-indent:2em;
+  width:88%;
+  margin:0 auto;
+  font-family: "Microsoft YaHei";
+}
+.box-3 .p1{
+  width:80%;
+  color:#fff;
+  font-size:px2Rem(48);
+  font-weight: 600;
+  margin:43% auto 0;
+  text-align: left;
+}
+@keyframes rot1 {
+  0%{
+    transform:rotate(-10deg);
+  }
+  25%{
+    transform:rotate(0deg);
+  }
+  50%{
+    transform:rotate(10deg);
+  }
+  75%{
+    transform:rotate(0deg);
+  }
+  100%{
+    transform:rotate(-10deg);
+  }
+}
+
+.rot{
+  animation:rot1 30s linear infinite;
+}
+.box-3 .p2{
+  width:80%;
+  color:#fff;
+  font-size:px2Rem(48);
+  font-weight: 600;
+  text-indent: 20%;
+  margin:0 auto 5%;
+
+}
+.box-3 .i3{
+  width:88%;
+  height:33%;
+  margin:0 auto;
+}
+.box-3 .i3 img{
+  @extend %webpage;
+}
+.box-3 .p3{
+  font-size:px2Rem(27);
+  line-height:px2Rem(38);
+  color:#f5f5f5;
+  width:87%;
+  margin:px2Rem(-40) auto 0;
+  text-indent: 2em;
+  font-weight:600;
+  text-align: left;
+}
+.box-4 .p1{
+  font-size:px2Rem(48);
+  margin:px2Rem(280) auto px2Rem(10);
+  color:#fff;
+  font-weight: 600;
+}
+.box-4 .i4{
+  width:95%;
+  height:43%;
+  margin:0 auto;
+}
+.box-4 .i4 img{
+  @extend %webpage;
+}
+.box-4 .p2{
+  font-size:px2Rem(28);
+  line-height:px2Rem(38);
+  margin:0 auto;
+  width:84%;
+  text-indent: 2em;
+  color:#fff;
+  font-family:"Microsoft YaHei";
+}
+
+.box-5 .i5{
+  width:90%;
+  height:50%;
+  margin:px2Rem(160) auto px2Rem(20);
+}
+.box-5 .i5 img{
+  @extend %webpage;
+}
+.box-5 .p1{
+  font-size:px2Rem(36);
+  color:#ccc;
+  margin:0 auto;
+}
+.box-5 .p2{
+  font-size:px2Rem(28);
+  line-height:px2Rem(38);
+  margin:px2Rem(20) auto 0;
+  text-align: left;
+  width:85%;
+  text-indent: 2em;
+  color:#bdbdbd;
+  font-family:"Microsoft YaHei";
+
+}
+
+.box-6 .i6{
+  width:93%;
+  height:50%;
+  margin-top:px2Rem(80);
+}
+.box-6 .i6 img{
+  @extend %webpage;
+}
+.box-6 .ac{
+  font-size:px2Rem(48);
+  width:88%;
+  margin:0 auto px2Rem(30);
+}
+.box-6 .ac .p{
+  line-height:px2Rem(66);
+  color:#0d0d0d;
+  font-family: "Microsoft YaHei";
+}
+.box-6 .p1{
+  text-align: left;
+}
+.box-6 .p2{
+  text-align: right;
+}
+.box-6 .p3{
+  font-size:px2Rem(28);
+  line-height:px2Rem(36);
+  width:88%;
+  margin:0 auto;
+  text-align: left;
+  text-indent: 2em;
+  color:#010101;
+}
+
+.box-7 h3{
+  font-size:px2Rem(48);
+  margin:px2Rem(160) auto px2Rem(10);
+  color:#000;
+}
+.box-7 .p1{
+  font-size:px2Rem(32);
+  color:#494949;
+  margin:0 auto;
+}
+.box-7 .p2{
+  font-size:px2Rem(32);
+  margin:px2Rem(10) auto px2Rem(114);
+  color:#494949;
+}
+.box-7 .i7{
+  width:78%;
+  height:62%;
+  margin:0 auto;
+}
+.box-7 .i7 img{
+  @extend %webpage;
+}
+.box-10 .p1{
+  font-size:px2Rem(32);
+  margin:px2Rem(120) auto px2Rem(48);
+}
+.box-10 .p1 a{
+  color:#595959;
+}
+.box-10 a:active{
+  text-decoration: none;
+}
+.box-10 a:link{
+  text-decoration: none;
+}
+.box-10 a:hover{
+  text-decoration: none;
+}
+.box-9 a:active{
+  text-decoration: none;
+}
+.box-9 a:link{
+  text-decoration: none;
+}
+.box-9 a:hover{
+  text-decoration: none;
+}
+.box-8 a:active{
+  text-decoration: none;
+}
+.box-8 a:link{
+  text-decoration: none;
+}
+.box-8 a:hover{
+  text-decoration: none;
+}
+.box-10 .btn{
+  background:#ff0000;
+  font-size:px2Rem(36);
+  width:px2Rem(260);
+  height:px2Rem(70);
+  margin:0 auto;
+  text-align: center;
+  line-height:px2Rem(70);
+  color:#fff;
+}
+.box-10 .content{
+  width:87%;
+  text-align: left;
+  margin:px2Rem(64) auto px2Rem(20);
+}
+.box-10 .content p a{
+  color:#888;
+  font-size:px2Rem(28);
+  line-height:px2Rem(36);
+}
+.box-10 .i8{
+  width:59%;
+  height:33%;
+  margin:0 auto;
+}
+.box-10 .i8 img{
+  @extend %webpage;
+}
+.box-10 .i9{
+  width:45%;
+  height:5%;
+  margin:0 auto;
+}
+.box-10 .i9 img{
+  @extend %webpage;
+}
+.box-9 h3{
+  width:88%;
+  text-align:left;
+  font-size:px2Rem(48);
+  color:#cf0000;
+  margin:px2Rem(176) auto px2Rem(20);
+  font-weight:600;
+}
+.box-9 .content{
+  width:88%;
+  text-align:left;
+  fong-size:px2Rem(24);
+  margin:0 auto;
+}
+.box-9 .content p{
+  line-height:px2Rem(32);
+}
+.box-9 .content p a{
+  color:#424242;
+}
+.box-9 .p1{
+  width:88%;
+  height:35%;
+  margin:px2Rem(20) auto 0;
+}
+.box-9 .p1 img{
+  @extend %webpage;
+}
+.box-8 .p1{
+  width:65%;
+  height:40%;
+  margin:px2Rem(175) auto 0;
+}
+.box-8 .p1 img{
+  @extend %webpage;
+}
+.box-8 .p2{
+  width:50%;
+  height:26%;
+  margin:px2Rem(-160) auto 0;
+}
+.box-8 .p2 img{
+  @extend %webpage;
+}
+.box-8 .p3{
+  font-size:px2Rem(28);
+  line-height:px2Rem(36);
+  width:88%;
+  margin:px2Rem(-45) auto 0;
+  text-align: left;
+  text-indent: 2em;
+}
+.box-8 .p3 a{
+  color:#fff;
+}
